@@ -1,0 +1,617 @@
+@import url(http://fonts.googleapis.com/css?family=Belgrano);
+
+$screen-num: 7;
+$menu-height: 68px;
+$frontIndex: 1000;
+$text-color: #FFF;
+$text-highlight:#e50000;
+
+*{
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    
+        
+}
+
+html, body{
+    width:100%;
+    height:100%;
+    min-width:320px;
+    
+}
+
+body{
+    font-family: 'Belgrano', serif;
+    color: #007d9b;
+    text-shadow: none;
+    background: #f4fcf0;
+}
+
+
+
+#page-wrapper {
+   height: 100%;
+   width: 100%; 
+}
+
+a {
+    color: #007d9b !important;
+}
+
+h1, h3 {
+        //line-height: 1em;
+        padding: 0;
+        margin: 0;
+        letter-spacing:1px;
+        font-weight: 400;
+    }
+
+
+.fl{ float: left; }
+.fr{ float: right; }
+.phm, .plm{ padding-left: 1%; }
+.phm, .prm{ padding-right: 1%; }
+.ui-switch-on, .ui-switch-off{ color: white !important; }
+
+
+/******
+FIXED WRAPPER
+******/
+
+.fixed{
+    width:100%;
+    position:fixed;
+    overflow: hidden;
+    z-index:$frontIndex;
+}
+
+/******
+FIXED WRAPPER
+******/
+
+.fixed{
+    width:100%;
+    position:fixed;
+    overflow: hidden;
+    z-index:$frontIndex;
+}
+
+
+
+
+
+
+/************
+  HEADER
+************/
+header{       
+    
+    width:100%;
+    height:$menu-height;
+    //background:url(../images/nav-bg.jpg) no-repeat top center;
+    //@include background-size(cover);
+    background-color: #ffffff;
+    //border-bottom:solid 1px #9e9fa0;
+    position: absolute;
+
+    #logo{
+        background: url("../images/img_logo.png") no-repeat scroll;
+        @include background-size(contain);
+        height: 62px;
+        left: 7px;
+        position: absolute;
+        width: 148px;
+    }
+
+    .sign-up{
+        position:absolute;
+        top: 1px;
+        right:3px;        
+    }
+
+    .close-form {
+        border: 2px solid;
+        border-radius: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        height: 30px;
+        line-height: 20px;
+        padding: 2px 6px;
+        position: absolute;
+        right: 4%;
+        text-decoration: none;
+        top: 18%;
+        width: 30px;
+    }
+    
+}
+
+.sign-up {
+    cursor:pointer; 
+    height: 62px;
+    width: 168px;
+    background: url(../images/btn_signUp.png) no-repeat center center; 
+    @include background-size(contain);
+}
+
+#content-wrapper {
+    height: 100%;
+    padding-top: $menu-height;
+}
+
+/************
+  HOME
+************/
+h1{
+	font-size:1.5em;
+}
+html.landscape {
+    #content-wrapper {
+        //height: 200%;
+    }
+    .center-nav ul li#what-is-mabinogi.accordion-toggle {
+        height: 15%;
+    }
+}
+
+.center-nav {
+    height: auto;
+    width: 100%;
+    //background: url("../images/bottom-bg1.jpg") repeat scroll center top rgba(0, 0, 0, 1);
+    //@include background-size(100% auto);
+    @media all and (-webkit-min-device-pixel-ratio: 1.5) { 
+    //    background-image: url('../images/bottom-bg1@2x.jpg') no-repeat scroll center center; 
+    }
+
+    ul {
+        //height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+        
+        li {
+            list-style-type: none;
+            &:first-child {
+                text-indent: -9999em;
+
+                background: url("../images/bg_1.jpg") no-repeat scroll center center rgba(0, 0, 0, 1);
+                @include background-size(cover); 
+
+                @media all and (-webkit-min-device-pixel-ratio: 1.5) { 
+                //   background-image: url('../images/bg_1@2x.jpg') no-repeat scroll center center rgba(0, 0, 0, 1); 
+                }
+
+                //height: 35.4%;
+            }
+            &:last-child {
+                background: url("../images/bg_7.jpg") no-repeat scroll center center rgba(0, 0, 0, 1);
+                border-top: 1px dashed #6dadbc;
+                @include background-size(cover);     
+                position: relative;            
+
+
+                @media all and (-webkit-min-device-pixel-ratio: 1.5) { 
+                //   background-image: url("../images/bg_7@2x.jpg") no-repeat scroll center center rgba(0, 0, 0, 1); 
+                }
+
+                //min-height: 37.9%;
+
+                #legal {
+					padding:10px 20px;
+					text-align:center;
+                    bottom: -50px;
+                    //font-family: Arial,Helvetica,sans-serif;
+                    font-size: 0.8em;
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+            &.accordion-toggle {
+                background: none repeat scroll 0 0 #f4fcf0;
+                border-top: 1px dashed #6dadbc;
+                //min-height: 9.1%;
+                margin: 0;
+                opacity: 0.95;
+                cursor: pointer;
+                padding: 0.5% 6%;
+                &.nomargin {
+                    margin-top: 0;
+                }
+                
+                //&#game-features, &#our-community{
+                //    margin-top: 0.6%;
+                //    &.nomargin {
+                //        margin-top: 0;
+                //    } 
+                //}
+                h3 {
+                    @media only screen and (width: 320px) and (max-height: 479px)   {
+                        float: left;
+                        font-size: 1.4em;
+                    }   
+                }
+                h1{
+                    @media only screen and (width: 320px) and (max-height: 479px)   {
+                        float: left;
+                        font-size: 1.44em;
+                        padding-left: 0.3em;
+                    }
+                }
+
+            }
+            
+            &.accordion-content {
+                display:none;				
+                width: 100%;
+                height: auto;				
+				padding:0;
+				margin:0;
+				
+                section {
+                    position: relative;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .sign-up{
+                        height: 50%;
+                        left: 1%;
+                        position: absolute;
+                        top: 0;
+                        width: 38%;       
+                    }   
+                                    
+                    .section-content {
+                       position: absolute;
+                       bottom: 8%;
+                       padding: 2% 10%;
+                       height: 40%;
+                    }
+
+                    h3{
+                        color:#000000;                        
+                        font-size:1.1em;
+                        
+                    }
+
+                    h1{
+                        color:#000000;                        
+                        font-size:1.5em;
+                        
+                    }
+                    
+                    .section-text {
+                        color:#000000;                     
+                        font-size: 1em;
+                        margin-top: 0.3em;
+                    }
+                }
+            }
+
+            .headers {
+                width: 80%;
+                float: left;  
+                margin: 0.2% 3%;
+
+                @media only screen and (width: 320px) and (max-height: 479px)   {
+                   margin: 2.6% 3%;
+                }              
+            }
+
+            .expander{
+                float: right;
+                margin-top: 2%;
+                &.active {
+                    //background-position: -16px 0;
+                }
+                @media only screen and (width: 320px) and (max-height: 479px)   {
+                   margin: 2% 4%;
+                }
+            }
+            
+            .fa-plus-square-o, .fa-minus-square-o{
+                display: block;
+                height: 25px;
+                width: 25px; 
+            }
+            .fa-plus-square-o{ background: url("../images/btn_expand.png") no-repeat scroll 0 0; }
+            .fa-minus-square-o{ background: url("../images/btn_expanded.png") no-repeat scroll 0 0 !important; }
+        }
+    }
+}
+
+/************
+  SIGN-UP
+************/
+#sign-up-page {
+   background: url("../images/form-bg.png") no-repeat scroll center top rgba(0, 0, 0, 1);
+   @include background-size(cover);
+}
+
+.close-form {
+    border: 2px solid;
+    border-radius: 15px;
+    font-size: 26px;
+    font-weight: 700;
+    height: 30px;
+    line-height: 20px;
+    padding: 4px;
+    position: absolute;
+    right: 4%;
+    text-decoration: none;
+    top: 18%;
+    width: 30px;
+}
+
+#sign-up-form {
+    padding: 30px 0;
+
+    .input {
+        border: 0px solid #444444;
+        height:42px;
+        width: 100%;
+        background:url(../images/form-field.png) no-repeat center center; 
+        @include background-size(cover);
+
+        @media all and (-webkit-min-device-pixel-ratio: 1.5) { 
+        //    background-image: url('../images/form-field@2x.png') no-repeat center center;; 
+        }
+
+        color:#fff; 
+        padding:0 10px; 
+        font-size:16px;
+        display:block;        
+    }
+    input[type="checkbox"] {
+        height: 22.5px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 22.5px !important;
+        float: left;
+
+    }
+
+    .captcha-wrapper {
+        width: 280px;
+        margin: 0 auto;
+        h3 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+
+
+    .error-wrapper,.error-msg {
+        color: #FF0000;
+        height: 18px;
+        line-height: 20px;
+        padding: 9px 0 0 10px;
+    }
+
+    .input-holder {
+        display: block;
+        font-family: Helvetica,Arial,sans-serif;
+        font-size:12px;
+        padding: 5px 0;
+        &.terms-section {
+            margin-bottom: 15px;
+            .terms-text {
+                float: left;
+                margin-left: 5px;
+                padding-top: 2px;
+                vertical-align: middle;
+            }
+        }
+        .input-error {
+            color: #FF0000;
+            font-size: 25px;
+            font-weight: bold;
+            position: absolute;
+            right: 4px;
+            top: 0;
+        }
+    }
+
+
+    #form-submit {
+        background: url("../images/sign-up-sprite.jpg") no-repeat scroll 0 -43px rgba(0, 0, 0, 1);
+        height: 43px;
+        margin: 25px auto;
+        width: 180px;
+        #submit-btn {
+            background: url("../images/sign-up-sprite.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 1);
+            height: 43px;
+            margin: 0 auto;
+            width: 180px;
+            border: 0 none;
+        }
+    }
+}
+
+
+#verification-page .scene-bg {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.success-wrapper{
+	display:none;
+	padding: 1.5em;
+	font-size:1.2em;
+	#conf-email{
+		color:$text-highlight;
+	}
+}	
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/* Prevent callout */
+
+.nocallout {
+    -webkit-touch-callout: none;
+}
+
+.pressed {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+
+.gifhidden {
+    position: absolute;
+    left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+.ir br {
+    display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+
+@media only screen and (min-width: 480px) {
+    body{
+      //  font-size:60%;  
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    body{
+    //    font-size:70%;  
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body{
+     //   font-size:80%;  
+    }
+}
+
+
+@media only screen and (min-width: 1300px) {
+    body{
+    //    font-size:90%;  
+    }
+}
+
+
+@media only screen and (min-width: 1600px) {
+    body{
+     //   font-size:100%; 
+    }
+}
+
+@media only screen and (min-width: 2400px) {
+    body{
+       // font-size:110%; 
+    }
+}
+
+
+
+

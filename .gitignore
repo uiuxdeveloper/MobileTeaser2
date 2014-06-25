@@ -1,0 +1,16 @@
+.DS_STORE
+
+# Node.
+node_modules
+npm-debug.log
+
+# Grunt
+assets/images
+
+assets/css
+assets/js/main.min.js
+assets/js/sign-up.min.js
+assets/js/vendor.min.js
+
+#Protect our AWs keys
+grunt-aws.json

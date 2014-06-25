@@ -1,0 +1,76 @@
+/*
+jQuery Tooltip 1.0.0
+*/
+
+
+.tooltip_content {
+     font: 13px / 1.7 'Helvetica Neue',Helvetica,Arial,sans-serif;
+     color: #333;
+     background-color: #fff;
+     color: #333;
+     padding: 9px 17px;
+}
+
+.tooltip_container_bottom,
+.tooltip_container_top {
+     display: none;
+     position: absolute;
+     z-index: 1000;
+}
+
+.tooltip_point_top, 
+.tooltip_point_bottom {
+     position: relative;
+     background: #fff;
+     border: 1px solid #dcdcdc;
+}
+
+.tooltip_point_top {
+     &:after,
+     &:before {
+          position: absolute;
+          pointer-events: none;
+          border: solid transparent;
+          top: 100% ;
+          content: "";
+          height: 0;
+          width: 0;
+     }
+     &:after {
+          border-top-color: #fff;
+          border-width: 8px;
+          left: 50% ;
+          margin-left: -8px;
+     }
+     &:before {
+          border-top-color: #dcdcdc;
+          border-width: 9px;
+          left: 50% ;
+          margin-left: -9px;
+     }
+}
+
+.tooltip_point_bottom {
+     &:after,
+     &:before {
+          position: absolute;
+          pointer-events: none;
+          border: solid transparent;
+          bottom: 100% ;
+          content: "";
+          height: 0;
+          width: 0;
+     }
+     &:after {
+          border-bottom-color: #fff;
+          border-width: 8px;
+          left: 50% ;
+          margin-left: -8px;
+     }
+     &:before {
+          border-bottom-color: #dcdcdc;
+          border-width: 9px;
+          left: 50% ;
+          margin-left: -9px;
+     }
+}

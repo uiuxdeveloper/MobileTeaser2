@@ -1,0 +1,132 @@
+<!DOCTYPE html style="-ms-touch-action: none;">
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta http-equiv="cleartype" content="on">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="images/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="images/touch/apple-touch-icon.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="images/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#222222">
+
+
+        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+        <!--
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
+        -->
+
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <!--
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        -->
+        <link rel="stylesheet" href="assets/css/app.min.css">
+        <!--script src="assets/js/vendor/modernizr.js"></script-->
+    </head>
+    <body id="sign-up-page">
+		
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5R3SV4"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5R3SV4');</script>
+        <!-- End Google Tag Manager -->
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-50808751-1', 'nexon.net');
+            ga('send', 'pageview');
+        </script>
+        
+        <div id="page-wrapper" data-role="none">
+            <header class="">
+                <div id="logo"></div> 
+                <a href="/landing/mobile" class="close-form ga-tracker" data-track="Close Sign Up - return to main page">X</a>
+            </header>
+            <div id="content-wrapper">
+                <div class="scene-bg">
+
+                    <div id="sign-up-form">
+                        <div class="captcha-wrapper">
+                            <h3>Create an Account</h3>
+                            
+                            <form id="mobile-registation"> 
+                                <div class="input-holder tip" data-tiptext="You will need to verify this email address before playing Mabinogi">
+                                    <input class="input" type="text" id="form-email" placeholder="EMAIL">
+                                    <div class="input-error"></div>
+                                    <div class="error-msg">&nbsp;</div>
+                                </div>
+                                <div class="input-holder tip" data-tiptext="at least 6 super secret letters, symbols or numbers">
+                                    <input class="input" type="password" id="form-password" placeholder="PASSWORD">
+                                    <div class="input-error"></div>
+                                    <div class="error-msg">&nbsp;</div>
+                                </div>
+                                <div class="input-holder tip" data-tiptext="just to make sure we got it right">
+                                    <input class="input" type="password" id="form-password-confirm" placeholder="CONFIRM PASSWORD">
+                                    <div class="input-error"></div>
+                                    <div class="error-msg">&nbsp;</div>
+                                </div>
+                                <div class="input-holder tip" data-tiptext="enter a birthdate in mm/dd/yyyy format">
+                                    <input class="input" type="text" id="form-dob" placeholder="DATE OF BIRTH"> 
+                                    <div class="input-error"></div>
+                                    <div class="error-msg">&nbsp;</div>
+                                </div>
+                                <div class="input-holder terms-section">
+                                    <input id="terms-agree" type="checkbox">
+                                    <span class="terms-text"> I agree to the <a href="http://www.nexon.net/legal/terms-of-use/" target="_blank">terms of use</a> and <a href="http://www.nexon.net/legal/privacy-policy-nexonlauncher/" target="_blank">privacy policy</a>
+                                    </span>
+                                    <div class="error-msg">&nbsp;</div>
+                                </div>
+                                
+                                <select id="flipper">
+                                  <option value="1">SLIDE TO LOCK FORM</option>
+                                  <option value="0" selected="selected">SLIDE TO UNLOCK FORM</option>
+                                </select>                           
+                                <div class="error-wrapper"></div>                                
+                                <div id="form-submit"></div>
+                            </form>
+                        </div>
+                        <div class="success-wrapper">
+                            <p>Account Creation Successful! </p>
+
+                            <p>Your account name: <span id="conf-email">ABC@XYZ.com</span></p>
+
+                            <p>Congratulations, you are well on your way to playing Mabinogi! You will receive a validation email shortly, which will include a PC download link for the Nexon launcher. Once the launcher is installed you can download Mabinogi. </p>
+
+                            <!--<p>Trouble verifying? <a href="#">Resend verification code.</a></p>-->
+                        </div>
+                    </div>
+
+                </div><!-- /content -->
+            </div>
+        </div>
+        
+        <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>       
+        <script>window.jQuery || document.write('<script src="assets/js/jquery-2.1.0.min.js"><\/script>')</script>
+
+        <script type="text/javascript" src="assets/js/vendor.min.js"></script>
+        <script type="text/javascript" src="assets/js/helpers.js"></script>
+        <script src="assets/js/sign-up.min.js"></script>
+
+    </body>
+</html>
